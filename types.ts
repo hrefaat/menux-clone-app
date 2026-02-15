@@ -22,7 +22,16 @@ export interface RestaurantConfig {
   qrBgColor: string;
 }
 
-export type ViewMode = 'LANDING' | 'DASHBOARD' | 'CUSTOMER_PREVIEW';
+export interface RestaurantData {
+  ownerId: string;
+  name: string;
+  primaryColor: string;
+  currency: string;
+  logo: string;
+  phone: string;
+  categories: Category[];
+  items: MenuItem[];
+}
 
 export interface CartItem extends MenuItem {
   quantity: number;
